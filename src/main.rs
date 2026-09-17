@@ -4,10 +4,12 @@ type Int = i128;
 
 fn main() {
     let mut input = String::new();
-    stdin().read_to_string(&mut input).expect("Unable to read input");
+    stdin()
+        .read_to_string(&mut input)
+        .expect("Unable to read input");
 
     let mut result: Int = 0;
-    for slice in input.split(|c| c == ' ' || c == '\n' || c == '\t' ) {
+    for slice in input.split(|c| c == ' ' || c == '\n' || c == '\t') {
         if slice.len() == 0 {
             continue;
         }
