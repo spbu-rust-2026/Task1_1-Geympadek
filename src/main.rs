@@ -9,5 +9,5 @@ fn main() {
         result += slice.parse::<i32>().expect("Unable to parse given value");
     }
 
-    println!("{result}");
+    print!("{result}");
 }
