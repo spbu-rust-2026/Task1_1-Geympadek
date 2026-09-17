@@ -7,7 +7,7 @@ fn main() {
     stdin().read_line(&mut input).expect("Unable to read input");
 
     let mut result: Int = 0;
-    for slice in input.split(|c| c == ' ' || c == '\n' ) {
+    for slice in input.split(|c| c == ' ' || c == '\n') {
         if slice.len() == 0 {
             continue;
         }
