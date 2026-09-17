@@ -1,13 +1,13 @@
-use std::io::stdin;
+use std::io::{Read, stdin};
 
 type Int = i128;
 
 fn main() {
     let mut input = String::new();
-    stdin().read_line(&mut input).expect("Unable to read input");
+    stdin().read_to_string(&mut input).expect("Unable to read input");
 
     let mut result: Int = 0;
-    for slice in input.split(|c| c == ' ' || c == '\n') {
+    for slice in input.split(|c| c == ' ' || c == '\n' || c == '\t' ) {
         if slice.len() == 0 {
             continue;
         }
