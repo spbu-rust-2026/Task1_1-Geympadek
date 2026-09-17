@@ -1,3 +1,20 @@
+use std::io::{Read, stdin};
+
+type Int = i128;
+
 fn main() {
-    println!("Hello, world!");
+    let mut input = String::new();
+    stdin()
+        .read_to_string(&mut input)
+        .expect("Unable to read input");
+
+    let mut result: Int = 0;
+    for slice in input.split(|c| c == ' ' || c == '\n' || c == '\t') {
+        if slice.len() == 0 {
+            continue;
+        }
+        result += slice.parse::<Int>().expect("Unable to parse given value");
+    }
+
+    print!("{result}");
 }
